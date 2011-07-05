@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emp>
+  <extension type="integer">5678</extension>
+  <id type="integer">3</id>
+  <name>roy fielding</name>
+</emp>

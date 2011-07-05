@@ -7,6 +7,7 @@ class EmpsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @emps }
+      format.json { render :json => @emps }
     end
   end
 
@@ -18,6 +19,7 @@ class EmpsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @emp }
+      format.json { render :json => @emp }
     end
   end
 
@@ -46,9 +48,11 @@ class EmpsController < ApplicationController
       if @emp.save
         format.html { redirect_to(@emp, :notice => 'Emp was successfully created.') }
         format.xml  { render :xml => @emp, :status => :created, :location => @emp }
+        format.json { render :json => @emp, :status => :created, :location => @emp }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @emp.errors, :status => :unprocessable_entity }
+        format.json { render :json => @emp.errors, :status => :unprocessable_entity }
       end
     end
   end
